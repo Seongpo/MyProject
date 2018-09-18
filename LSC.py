@@ -12,7 +12,7 @@ def lsc(imgs, imgc):
     mse=numpy.mean((img2-sourcemean)**2)
     #for i in range(len(img2)):
     #    print(img2[i])
-    print('MSE = ', numpy.sqrt(mse))
+    print('MSE = ', math.sqrt(mse))
     return
 
 def gray(image_color):
