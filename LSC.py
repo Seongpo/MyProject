@@ -2,16 +2,13 @@ import numpy
 import math
 import cv2
 
-original = cv2.imread('image/LSC_OFF.bmp', cv2.IMREAD_COLOR)
-contrast = cv2.imread('image/LSC_ON.bmp', cv2.IMREAD_COLOR)
-def lsc(imgs, imgc):
-    img1=gray(imgs)
-    img2=gray(imgc)
+original = cv2.imread('image/LSC_OFF.bmp', cv2.IMREAD_GRAYSCALE)
+contrast = cv2.imread('image/LSC_ON.bmp', cv2.IMREAD_GRAYSCALE)
+def lsc(img1, img2):
+    #img1=gray(imgs)
+    #img2=gray(imgc)
     sourcemean=numpy.mean(img1)    
-    print(sourcemean)
     mse=numpy.mean((img2-sourcemean)**2)
-    #for i in range(len(img2)):
-    #    print(img2[i])
     print('MSE = ', math.sqrt(mse))
     return
 
