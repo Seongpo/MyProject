@@ -15,5 +15,8 @@ def image_copy():
         cv2.imwrite('image/galaxy2.jpg', img)
         cv2.destroyAllWindows()
         return
+
+
+        
 if __name__=='__main__':
     image_copy()
