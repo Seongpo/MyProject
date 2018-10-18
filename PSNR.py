@@ -1,9 +1,10 @@
+'''PSNR을 계산'''
 import math
 import numpy
 import cv2
 
-original = cv2.imread('image/DNR_GTc.bmp', cv2.IMREAD_COLOR)
-contrast = cv2.imread('image/DNR_ON.bmp', cv2.IMREAD_COLOR)
+ORIGINAL = cv2.imread('image/DNR_GTc.bmp', cv2.IMREAD_COLOR)
+CONTRAST = cv2.imread('image/DNR_ON.bmp', cv2.IMREAD_COLOR)
 
 def psnr(img1, img2):
     '''psnr 계산'''
@@ -13,4 +14,4 @@ def psnr(img1, img2):
     pixel_max = 255.0
     return 20*math.log10(pixel_max/math.sqrt(mse))
 
-print(psnr(original, contrast))
+print(psnr(ORIGINAL, CONTRAST))
