@@ -16,12 +16,12 @@ import time
 
 player = MediaPlayer('./image/01_Command_Stream.ts')
 while 1:
-    player.get_frame()
-    # if val == 'eof':
-    #     break
-    # elif frame is None:
-    #     time.sleep(0.01)
-    # else:
-    #     img, t = frame
-    #     print(val, t, img.get_pixel_format(), img.get_buffer_size())
-    #     time.sleep(val)
+    frame, val = player.get_frame()
+    if val == 'eof':
+        break
+    elif frame is None:
+        time.sleep(0.01)
+    else:
+        img, t = frame
+        print(val, t, img.get_pixel_format(), img.get_buffer_size())
+        time.sleep(val)
