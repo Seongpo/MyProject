@@ -11,7 +11,7 @@ def image_handler():
     img1 = cv2.imread(image_file, 0)
     img2 = cv2.imread(image_file, 1) 
     img3 = cv2.imread(image_file, -1)
-    
+    print(np.shape(img2))
     # imshow 함수를 사용하는데 첫번째 파라미터는 해당 이미지 윈도우의 타이틀, 두번째는 화면에 나타낼 이미지 객체 입니다.
     cv2.imshow('color 0: Gray Image', img1)
     # cv2.imshow('color 1: Color Image', img2)
