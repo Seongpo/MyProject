@@ -39,7 +39,7 @@ while(1):
     # if s == 0:
     #     img[:] = 0
     # else:
-    #     img[:] = [b, g, r]
+    #     img[:] = [b, g, r] #[b,g,r]을 반복하여 전 array에 대입
 
     img = cv2.line(img, (0, 0), (511, 511), (b, g, r), 5)
        
