@@ -14,8 +14,6 @@ addimg = cv2.add(img1, img2)
 dst = cv2.addWeighted(img1, 0.7, img2, 0.3, 0)
 
 cv2.imshow('image blending', dst)
-# cv2.imshow('image1', img1)
-# cv2.imshow('image2', img2)
 cv2.imshow('image addition', addimg)
 cv2.waitKey(0)
 cv2.destroyWindows()
