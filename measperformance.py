@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+#opencv  의 최적화 도구 사용 명령
 cv2.setUseOptimized(True)
 
 img1 = cv2.imread('./image/galaxy.jpg', 1)
